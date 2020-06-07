@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+Call the API to GET a list of dealers.
+Filter dealers by Brand brandName and dealerProvinceCode
+In the table display: dealerId, Province (use dealerProvinceCode to derive Province)
+https://api.bmw.co.za/webcontact/v1/dealer
+-->
+<html>
+  <head>
+    <title>AngularJS Front-End Developer Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/libs/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dealer List.</h1>
+      <p>Here is a list of our dealers.</p>
+      <div class="panel panel-default">
+        <div class="panel-heading">Filter:</div>
+      <form class="form-inline panel-body">
+        <div class="form-group col-md-3">
+          <label for="brand">Brand:</label>
+          <!-- implement using ng-options -->
+          <select class="form-control" id="brand">
+            <option>Select</option>
+            <option>BMW</option>
+            <option>MINI</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="province">Province:</label>
+          <!-- implement using ng-options -->
+          <select class="form-control" id="province">
+            <option>Select</option>
+            <option>Eastern Cape</option>
+            <option>Free State</option>
+            <option>Gauteng</option>
+            <option>KwaZulu-Natal</option>
+            <option>Limpopo</option>
+            <option>Mpumalanga</option>
+            <option>Northern Cape</option>
+            <option>North West</option>
+            <option>Western Cape</option>
+          </select>
+        </div>
+        <!-- Implement a 3rd filter -->
+      </form>
+        </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="col-md-2">Dealer Id</th>
+            <th class="col-md-5">Dealer Name</th>
+            <th class="col-md-5">Province</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+          <tr>
+            <td>02933</td>
+            <td>Alberante</td>
+            <td>GP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

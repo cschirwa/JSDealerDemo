@@ -1,0 +1,81 @@
+<div>
+  <h1>Dealer List.</h1>
+  <p>Here are a list of our BMW dealers.</p>
+  <div class="panel panel-default">
+    <div class="panel-heading">Filter:</div>
+    <form class="form-inline panel-body">
+      <div class="form-group col-md-3">
+        <label for="brand">Brand:</label>
+        <!-- implement using ng-options -->
+        <select class="form-control" id="brand">
+          <option>Select</option>
+          <option>BMW</option>
+          <option>MINI</option>
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="province">Province:</label>
+        <!-- implement using ng-options -->
+        <select class="form-control" id="province">
+          <option>Select</option>
+          <option>Eastern Cape</option>
+          <option>Free State</option>
+          <option>Gauteng</option>
+          <option>KwaZulu-Natal</option>
+          <option>Limpopo</option>
+          <option>Mpumalanga</option>
+          <option>Northern Cape</option>
+          <option>North West</option>
+          <option>Western Cape</option>
+        </select>
+      </div>
+      <!-- Implement a 3rd filter -->
+    </form>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="col-md-2">Dealer Id</th>
+        <th class="col-md-5">Dealer Name</th>
+        <th class="col-md-5">Province</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+      <tr>
+        <td>02933</td>
+        <td>Alberante</td>
+        <td>GP</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
