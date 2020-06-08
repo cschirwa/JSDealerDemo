@@ -29,26 +29,27 @@ https://api.bmw.co.za/webcontact/v1/dealer
         <div class="form-group col-md-3">
           <label for="brand">Brand:</label>
           <!-- implement using ng-options -->
-          <select class="form-control" id="brand">
-            <option>Select</option>
+          <select class="form-control" id="brand" ng-model="search.brand">
+            <option></option>
             <option>BMW</option>
             <option>MINI</option>
+            <option>MOTORAD</option>
           </select>
         </div>
         <div class="form-group col-md-3">
           <label for="province">Province:</label>
           <!-- implement using ng-options -->
-          <select class="form-control" id="province">
-            <option>Select</option>
-            <option>Eastern Cape</option>
-            <option>Free State</option>
-            <option>Gauteng</option>
-            <option>KwaZulu-Natal</option>
-            <option>Limpopo</option>
-            <option>Mpumalanga</option>
-            <option>Northern Cape</option>
-            <option>North West</option>
-            <option>Western Cape</option>
+          <select class="form-control" id="province" ng-model="search.dealerProvinceCode">
+            <option></option>
+            <option value="EC">Eastern Cape</option>
+            <option value="FS">Free State</option>
+            <option value="GP">Gauteng</option>
+            <option value="KN">KwaZulu-Natal</option>
+            <option value="LP">Limpopo</option>
+            <option value="MP">Mpumalanga</option>
+            <option value="NC">Northern Cape</option>
+            <option value="NW">North West</option>
+            <option value="WC">Western Cape</option>
           </select>
         </div>
         <!-- Implement a 3rd filter -->
@@ -64,7 +65,7 @@ https://api.bmw.co.za/webcontact/v1/dealer
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="dealer in dealerData">
+          <tr ng-repeat="dealer in dealerData | filter: search">
             <td>{{dealer.dealerId}}</td>
             <td>{{dealer.dealerName}}</td>
             <td>{{dealer.dealerProvinceCode}}</td>
