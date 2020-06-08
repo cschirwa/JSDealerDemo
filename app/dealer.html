@@ -29,7 +29,7 @@ https://api.bmw.co.za/webcontact/v1/dealer
         <div class="form-group col-md-3">
           <label for="brand">Brand:</label>
           <!-- implement using ng-options -->
-          <select class="form-control" id="brand" ng-model="search.brand">
+          <select class="form-control" id="brand" ng-filter="search.brandName">
             <option></option>
             <option>BMW</option>
             <option>MINI</option>
@@ -53,6 +53,19 @@ https://api.bmw.co.za/webcontact/v1/dealer
           </select>
         </div>
         <!-- Implement a 3rd filter -->
+        <div class="form-group col-md-3">
+          <label for="Region">Dealer Region:</label>
+          <!-- implement using ng-options -->
+          <select class="form-control" id="region" ng-model="search.dealerRegion">
+            <option></option>
+            <option value="R1">Region 1</option>
+            <option value="R2">Region 2</option>
+            <option value="R3">Region 3</option>
+            <option value="R4">Region 4</option>
+            <option value="R5">Region 5</option>
+            <option value="S">South Region</option>
+          </select>
+        </div>
       </form>
         </div>
 
@@ -65,7 +78,7 @@ https://api.bmw.co.za/webcontact/v1/dealer
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="dealer in dealerData | filter: search">
+          <tr ng-repeat="dealer in dealerData | filter: search: false">
             <td>{{dealer.dealerId}}</td>
             <td>{{dealer.dealerName}}</td>
             <td>{{dealer.dealerProvinceCode}}</td>
