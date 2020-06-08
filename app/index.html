@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -6,35 +7,35 @@ and open the template in the editor.
 -->
 
 <html>
-  <head>
-    <title>AngularJS Front-End Developer Test</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
-  </head>
-  <body>
-  <div ng-view></div>
-    <div class="container" ng-app="app" ng-controller="AppController">
-      <h1>AngularJS Front-End Developer Test.</h1>
-        <form class="col-md-6" action="dealer">
-          <h3>Login.</h3>
-          <div class="form-group">
-            <label for="idNumber">ID Number:</label>
-            <input type="idNumber" class="form-control" id="idNumber" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" required>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      
+<head>
+  <title>AngularJS Front-End Developer Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+</head>
+<body>
+<div ng-view></div>
+<div class="container" ng-app="app" ng-controller="AppController">
+  <h1>AngularJS Front-End Developer Test.</h1>
+  <form class="col-md-6" action="dealer">
+    <h3>Login.</h3>
+    <div class="form-group">
+      <label for="idNumber">ID Number:</label>
+      <input type="idNumber" class="form-control" id="idNumber" required>
     </div>
-    <!-- Latest compiled and minified CSS -->
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="main.js"></script>
-  </body>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" required>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+</div>
+<!-- Latest compiled and minified CSS -->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- Latest compiled and minified JavaScript -->
+<script src="main.js"></script>
+</body>
 </html>
