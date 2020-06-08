@@ -1,26 +1,42 @@
 
 
 var app = angular.module('app', ['ngRoute']);
+    app.constant("baseUrl","http://localhost:8080");
     var dealerData;
     app.controller('AppController', function ($scope) {
-            $scope.message = "TestMessgae";
-});
-    app.config(['$routeProvider', function($routeProvider) {
+    });
+    app.config(function($routeProvider, $locationProvider) {
         $routeProvider.when('/login', {
             templateUrl: '/index.html',
             controller: 'LoginController'
         }).when("/dealer", {
             templateUrl: '/dealer.html',
             controller: 'DealerController'
-        });
-    }]);
+        }).otherwise ({
+            redirectTo: '/index.html'
+        })
+        $locationProvider.html5Mode(true);
+    });
 
     app.controller('LoginController',function($scope) {
     $scope.credentials = {
-        username:"Controllers",
-        password :"Controllers in action"
+        idNumber:"1234567890123",
+        password :"1@Foobar"
     }
     });
+
+    var login = function() {
+        $http.post('https://app.bmw.co.za/dws/CandidateTest/servlet/Login', credentials).then(successCallback, errorCallback);
+    };
+
+function successCallback(){
+
+    console.log("Success successCallback");
+}
+
+function errorCallback(){
+    console.log("errorCallback");
+}
 
     app.controller('DealerController',function($scope, $http) {
         try {
@@ -32,15 +48,9 @@ var app = angular.module('app', ['ngRoute']);
         }
 });
 
-// 'use strict';
-//
-// angular.module('myApp', [
-//     'ngRoute',
-//     'login.view1',
-//     'dealer.view2'
-// ]).
-// config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-//     $locationProvider.hashPrefix('!');
-//
-//     $routeProvider.otherwise({redirectTo: '/view1'});
-// }]);
+    app.controller('LogoutController', function($scope,$location){
+        $scope.logout = function(){
+            $location.path('/login');
+            window.location="index.html";
+        }
+    });

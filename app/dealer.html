@@ -10,13 +10,17 @@ https://api.bmw.co.za/webcontact/v1/dealer
     <title>AngularJS Front-End Developer Test</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+      <base href="/dealer">
   </head>
-
   <body>
   <div ng-view></div>
+  <p><p>
   <div ng-app="app" ng-controller="DealerController">
     <div class="container">
+      <p>
+        <button ng-controller="LogoutController" ng-click="logout()"
+                type="button" class="btn btn-secondary" style="float: right">Log Out</button>
+      </p>
       <h1>Dealer List.</h1>
       <p>Here is a list of our dealers.</p>
       <div class="panel panel-default">
